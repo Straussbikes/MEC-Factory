@@ -1,0 +1,29 @@
+{
+    "subscriptionType": "string",
+    "callbackReference": "string",
+    "_links": {
+      "self": {
+        "href": "string"
+      }
+    },
+    "filteringCriteria": {
+      "serInstanceIds": [
+        "string"
+      ],
+      "serNames": [
+        "string"
+      ],
+      "serCategories": [
+        {
+          "href": "string",
+          "id": "string",
+          "name": "string",
+          "version": "string"
+        }
+      ],
+      "states": [
+        "ACTIVE"
+      ],
+      "isLocal": true
+    }
+  }
