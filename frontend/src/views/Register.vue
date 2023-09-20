@@ -45,7 +45,7 @@ export default {
       }
 
       try {
-        const response = await axios.post('http://localhost:5000/api/v1/register', {
+        const response = await axios.post('/register', {
           "name": this.name,
            "email": this.email,
           "password": this.password,
