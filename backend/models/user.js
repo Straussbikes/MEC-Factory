@@ -32,6 +32,11 @@ const pedidoss = new mongoose.Schema({
         type:String,
         
     },
+    email:{
+        type:String,
+        required:true,
+        index:{unique:false}
+    }
   
 });
 const userSchema= new mongoose.Schema({
@@ -50,7 +55,7 @@ const userSchema= new mongoose.Schema({
         type:String,
         required:true
     },
-    pedidos:[pedidoss],
+   
 });
 userSchema.pre("save",async function(next){
     const user = this

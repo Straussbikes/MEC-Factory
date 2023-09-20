@@ -30,8 +30,8 @@ export const register =async (req,res)=> {
     const {name,email,password} = req.body;
     
     try {
-        const pedidos=[]
-        const user = new User({name,email,password,pedidos});
+        
+        const user = new User({name,email,password});
         let users = await User.findOne({email});
         if(users) throw {code:11000};
          
@@ -72,7 +72,7 @@ export const logout = async  (req,res) => {
     try {
         res.clearCookie('refreshToken');
         res.json({ok:true})
-        const resp = await User.updateOne({"email":email, "pedidos":[]})
+        const resp = await Pedido.deleteMany({email:email});
     } catch (error) {
         console.log(error)
     }
@@ -82,12 +82,11 @@ export const handleResponse = async (req,res) =>{
     try {
         
         const {appId,request,response,flag,erro,date,solution,newUrl,email} = req.body;
-        let users = await User.findOne({email});
+      
         
-        const pedidoss = new Pedido({appId,request,response,erro,date,solution,newUrl});
-        users.pedidos.push(pedidoss);
-        await users.save();
-        
+        const pedidoss = new Pedido({appId,request,response,erro,date,solution,newUrl,email});
+        console.log(email)
+        await pedidoss.save();
         res.json({ message: 'Data received successfully' });
       
     } catch (error) {
@@ -98,13 +97,12 @@ export const handleResponse = async (req,res) =>{
 export const pushData = async(req,res) =>{
     try {
         const  email=req.query.email
-        let user= await User.findOne({email})
-        const lastpedido=user.pedidos.pop()
-        if(lastpedido==undefined)
+        let pedido=await Pedido.findOneAndDelete({email:email}).sort()
+        if(pedido==undefined)
         {
             res.json(null)
         }else{
-            res.json(lastpedido)
+            res.json(pedido)
             
         }
       

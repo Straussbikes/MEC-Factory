@@ -6,7 +6,7 @@ import authRouter from './routes/auth.route.js';
 import cookieParser from "cookie-parser";
 
 const app = express();
-const whiteList=[process.env.ORIGIN1,"http://localhost", "http://127.0.0.1","http://188.80.154.200"];
+const whiteList=[process.env.ORIGIN1];
 
 
 
