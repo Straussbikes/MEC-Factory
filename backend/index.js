@@ -9,7 +9,7 @@ const app = express();
 const whiteList=[process.env.ORIGIN1];
 
 
-/*
+
 app.use(cors({
     origin: function(origin,callback){
         if(!origin ||whiteList.includes(origin)){
@@ -21,7 +21,7 @@ app.use(cors({
     },
     credentials: true,
 }))
-*/
+
 app.use(cookieParser());
 app.use(express.json());
 app.use('',authRouter);
