@@ -6,10 +6,15 @@ import authRouter from './routes/auth.route.js';
 import cookieParser from "cookie-parser";
 
 const app = express();
-const whiteList=[process.env.ORIGIN1,"http://localhost", "http://127.0.0.1","http://188.80.154.200"];
+const whiteList=[process.env.ORIGIN1,44.226.145.213
+54.187.200.255,
+34.213.214.55,
+35.164.95.156,
+44.230.95.183,
+44.229.200.200];
 
 
-
+/*
 app.use(cors({
     origin: function(origin,callback){
         if(!origin ||whiteList.includes(origin)){
@@ -21,7 +26,7 @@ app.use(cors({
     },
     credentials: true,
 }))
-
+*/
 app.use(cookieParser());
 app.use(express.json());
 app.use('',authRouter);
