@@ -9,7 +9,7 @@ const app = express();
 const whiteList=[process.env.ORIGIN1," https://frontend-dxox.onrender.com" ];
 
 
-
+/*
 app.use(cors({
     origin: function(origin,callback){
         console.log(req.headers); 
@@ -23,7 +23,7 @@ app.use(cors({
     },
     credentials: true,
 }))
-
+*/
 app.use(cookieParser());
 app.use(express.json());
 app.use('',authRouter);
