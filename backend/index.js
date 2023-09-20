@@ -6,7 +6,7 @@ import authRouter from './routes/auth.route.js';
 import cookieParser from "cookie-parser";
 
 const app = express();
-const whiteList=[process.env.ORIGIN1];
+const whiteList=[process.env.ORIGIN1," https://frontend-dxox.onrender.com" ];
 
 
 
