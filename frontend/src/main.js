@@ -9,7 +9,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { useUserStore } from '@/services/user-store';
 // Set the base URL for your API requests
-axios.defaults.baseURL = 'https://backend-94yb.onrender.com/api/v1';
+axios.defaults.baseURL = 'https://backend1-ytgb.onrender.com:10000/api/v1';
 axios.defaults.withCredentials = true;
 
 const app = createApp(App);
