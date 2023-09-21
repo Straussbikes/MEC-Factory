@@ -64,9 +64,11 @@ const userStore = useUserStore();
           } catch (error) {
             console.log(error)
           }
-          
+          /*
           await this.$router.push({path:"/main"});
           location.reload();
+        */
+          window.location.href = "/main";
         }
         console.log('Login successful:', response.data);
       } catch (error) {
