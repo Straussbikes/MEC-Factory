@@ -19,7 +19,7 @@ export const generateRefreshToken = (uid,res) =>{
             secure:!(process.env.MODO == "developer"),
             expires: new Date(Date.now() + expiresIn*1000)
         });
-    
+        res.send('Cookie set!');
     } catch (error) {
         console.log(error)
     }
