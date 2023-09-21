@@ -15,8 +15,11 @@ export const generateRefreshToken = (uid,res) =>{
     try {
         const refreshToken = jwt.sign({uid},process.env.JWT_REFRESH,{expiresIn});
         res.cookie("refreshToken",refreshToken,{
-            httpOnly: true,
-            expires: new Date(Date.now() + expiresIn*1000)
+               httpOnly: true,
+               httpOnly: true,
+               expires: new Date(Date.now() + expiresIn * 1000),
+               secure: true,      // Defina como true para HTTPS
+               sameSite: 'none',
        
         });
         
