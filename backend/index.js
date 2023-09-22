@@ -6,14 +6,10 @@ import authRouter from './routes/auth.route.js';
 import cookieParser from "cookie-parser";
 
 const app = express();
-const whiteList=[process.env.ORIGIN1," https://frontend-dxox.onrender.com",
-                "44.226.145.213",
-                "54.187.200.255",
-                "34.213.214.55",
-                "35.164.95.156",
-                "44.230.95.183",
-                "44.229.200.200"
-                ];
+const whiteList=[process.env.ORIGIN1,"https://frontend-zbvd.onrender.com",
+                 "3.75.158.163",
+                 "3.125.183.140",
+                 "35.157.117.28"];
 
 
 app.use(cors({
