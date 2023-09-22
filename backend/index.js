@@ -7,8 +7,8 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 const whiteList=[process.env.ORIGIN1,"https://frontend-ecru-two.vercel.app",
-                 "3.75.158.163",
-                 "3.125.183.140",
+                 "https://frontend-git-main-straussbikes.vercel.app",
+                 "frontend-ao3uakwhd-straussbikes.vercel.app",
                  "35.157.117.28"];
 
 
