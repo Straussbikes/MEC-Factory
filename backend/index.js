@@ -6,7 +6,7 @@ import authRouter from './routes/auth.route.js';
 import cookieParser from "cookie-parser";
 
 const app = express();
-const whiteList=[process.env.ORIGIN1,"https://frontend-zbvd.onrender.com",
+const whiteList=[process.env.ORIGIN1,"https://frontend-ecru-two.vercel.app",
                  "3.75.158.163",
                  "3.125.183.140",
                  "35.157.117.28"];
