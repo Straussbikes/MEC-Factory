@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently 'nodemon index.js' 'python3 /home/bikes/Desktop/test/backend/proxy/httpserver.py'",
+    "dev": "nodemon index.js ",
     "start": "node index.js"
   },
   "keywords": [],

@@ -406,7 +406,7 @@ def delServiceID(ip,appinstance,service):
 
 
 def getServices(ip):
-  url="http://0.0.0.0:8000/morgana@gmail.com/mac_service_mgmt/v1/services"
+  url="http://0.0.0.0:8000/joao@gmail.com/mac_service_mgmt/v1/services"
   url=url.replace("0.0.0.0:8000",ip)
   req=requests.get(url)
   print(req)
