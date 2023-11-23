@@ -4,7 +4,7 @@
 
 
 class Payload:
-    def __init__(self, appId,fromCli,fromMep,flagReso,erroCode,date,resolution,newurl,useremail):
+    def __init__(self, appId,fromCli,fromMep,flagReso,erroCode,date,resolution,newurl,useremail,example):
         self.appId=appId
         self.fromCli=fromCli
         self.fromMep=fromMep
@@ -14,6 +14,7 @@ class Payload:
         self.resolution=resolution
         self.newurl=newurl
         self.useremail=useremail
+        self.example=example
     
     def get_appId(self):
         return self.appId
@@ -29,6 +30,11 @@ class Payload:
         return self.date
     def get_resolution(self):
         return self.resolution
+    def get_example(self):
+        return self.example
+    
+    def set_example(self,a):
+        self.example=a
 
     def set_appId(self,a):
          self.appId=a
@@ -60,6 +66,7 @@ class Payload:
                   "date" : self.date,
                   "solution" : self.resolution,
                   "newUrl" :  self.newurl,
-                  "email":self.useremail
+                  "email":self.useremail,
+                  "example":self.example
                  }
 

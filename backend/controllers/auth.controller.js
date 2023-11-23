@@ -81,11 +81,12 @@ export const logout = async  (req,res) => {
 export const handleResponse = async (req,res) =>{
     try {
         
-        const {appId,request,response,flag,erro,date,solution,newUrl,email} = req.body;
+        const {appId,request,response,flag,erro,date,solution,newUrl,email,example} = req.body;
       
         
-        const pedidoss = new Pedido({appId,request,response,erro,date,solution,newUrl,email});
-        console.log(email)
+        const pedidoss = new Pedido({appId,request,response,erro,date,solution,newUrl,email,example});
+        
+        
         await pedidoss.save();
         res.json({ message: 'Data received successfully' });
       
@@ -109,6 +110,21 @@ export const pushData = async(req,res) =>{
         
     } catch (error) {
         console.error(error);
+    }
+
+}
+
+
+export const handleEtsi = async(req,res) =>{
+    try{
+        const url=req.body.url
+        const email= req.body.mail
+        let user= await User.findOne({email:email})
+        user.etsi=url
+        user.save()
+        //save database
+    }catch (error){
+        console.log(error);
     }
 
 }

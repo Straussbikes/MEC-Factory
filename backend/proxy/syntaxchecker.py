@@ -41,8 +41,12 @@ def testsyntax(word):
     wordl=word.split('_')
     lista=[]
     for i in wordl:
-        corrected_keyword=sp.spell_correct(i)
-        a=corrected_keyword['spell_corrected_text']
-        lista +=[a]
+        if(i=="area"):
+            a="area"
+            lista +=[a]
+        else:
+            corrected_keyword=sp.spell_correct(i)
+            a=corrected_keyword['spell_corrected_text']
+            lista +=[a]
     word="_".join(str(x) for x in lista)
     return word

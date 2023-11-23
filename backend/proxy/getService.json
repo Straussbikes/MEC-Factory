@@ -26,6 +26,10 @@
                             {
                                 "txt": "The operation is not allowed given the current status of the resource. "
             
+                            },
+                            "example":
+                            {   
+                                "txt":"def getServiceID(ip,appinstance,service,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/applications/asd/services/123\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  url=url.replace(\"123\",service)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                             }
 
                         },
@@ -52,6 +56,10 @@
                         "414":
                         {
                             "txt":"It is used to indicate that the server is refusing to process the request because the request URI is longer than the server is willing or able to process. "
+                        },
+                        "example":
+                        {   
+                            "txt":" "
                         }
                     },
                     "subscriptions":
@@ -77,6 +85,10 @@
                             {
                                 "txt": "The operation is not allowed given the current status of the resource. "
             
+                            },
+                            "example":
+                            {   
+                                "txt":"def getSubscriptionsIDserv(ip,appinstance,subs,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/applications/asd/subscriptions/subs\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  url=url.replace(\"subs\",subs)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                             }
 
                         },
@@ -99,6 +111,10 @@
                         {
                             "txt": "The operation is not allowed given the current status of the resource. "
         
+                        },
+                        "example":
+                        {   
+                            "txt":"def getSubscriptionsserv(ip,appinstance,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/applications/asd/subscriptions\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                         }
                     }
                 
@@ -124,6 +140,10 @@
                     "404":
                     {
                         "txt":"Not Found. It is used when a client provided a URI that cannot be mapped to a valid resource URI. "
+                    },
+                    "example":
+                    {   
+                        "txt":"def getServiceID(ip,appinstance,service,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/applications/asd/services/123\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  url=url.replace(\"123\",service)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                     }
 
                 },
@@ -135,7 +155,7 @@
                 },
                 "400":
                 {
-                    "txt":"Bad Request. It is used to indicate that incorrect parameters were passed to the request. "
+                    "txt":"Bad Request. It is used to indicate that incorrect parameters were passed to the request. asd"
                 },
                 "403":
                 {
@@ -148,6 +168,10 @@
                 "414":
                 {
                     "txt":"It is used to indicate that the server is refusing to process the request because the request URI is longer than the server is willing or able to process."
+                },
+                "example":
+                {   
+                    "txt":"def getServices(ip,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/services\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  \n  print(req.content)"
                 }  
                  
             },
@@ -155,7 +179,7 @@
             {
                 "200":
                 {
-                    "txt": " sucess"
+                    "txt": " success"
 
                 },
                 "400":
@@ -172,6 +196,10 @@
                 {
                     "txt": "The operation is not allowed given the current status of the resource."
 
+                },
+                "example":
+                {   
+                    "txt":"def getTransport(ip,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_service_mgmt/v1/transports\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                 }
            
 
@@ -206,6 +234,10 @@
                             "403":
                             {
                                 "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                            },
+                            "example":
+                            {   
+                                "txt":"def getTraffic_rulesID(ip,appinstance,trafficinstance,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/applications/asd/traffic_rules\"\n  url=url.replace(\"asd\",appinstance)\n  url=url.replace(\"rule\",trafficinstance)\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                             }
                         },
                         "200":
@@ -223,6 +255,10 @@
                         "403":
                         {
                             "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                        },
+                        "example":
+                        {   
+                            "txt": "def getTraffic_rules(ip,appinstance):\n  url=\"http://0.0.0.0:8000/mec_app_support/v1/applications/asd/traffic_rules\"\n  url=url.replace(\"asd\",appinstance)\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                         }
                     },
                     "dns_rules":
@@ -244,6 +280,10 @@
                             "403":
                             {
                                 "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                            },
+                            "example":
+                            {   
+                                "txt":"def getDNS_rulesID(ip,appinstance,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/applications/asd/dns_rules/dns\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                             }
 
                         },
@@ -262,6 +302,10 @@
                         "403":
                         {
                             "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                        },
+                        "example":
+                        {   
+                            "txt":"def getDNS_rules(ip,appinstance,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/applications/asd/dns_rules\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                         }
                     },
                     "subscriptions":
@@ -284,6 +328,10 @@
                             "403":
                             {
                                 "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the  detail attribute of the ProblemDetails  structure"
+                            },
+                            "example":
+                            {   
+                                "txt":" "
                             }
                         
                         },
@@ -302,6 +350,10 @@
                         "403":
                         {
                             "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                        },
+                        "example":
+                        {   
+                            "txt":"def getSubscriptions(ip,appinstance,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/applications/asd/subscriptions\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  url=url.replace(\"asd\",appinstance)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                         }
                     }
                 }
@@ -325,6 +377,10 @@
                     "403":
                     {
                         "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                    },
+                    "example":
+                    {   
+                        "txt": ""
                     }
                 }
             },
@@ -347,6 +403,11 @@
                     "403":
                     {
                         "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                    },
+                    "example":
+                    {   
+                        "txt":"def getTiming_caps(ip,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/timing/timing_caps\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
+                    
                     }
                 },
                 "current_time":
@@ -366,6 +427,10 @@
                     "403":
                     {
                         "txt": "The operation is not allowed given the current status of the resource. More information shall be provided in the detail attribute of the ProblemDetails structure"
+                    },
+                    "example":
+                    {   
+                        "txt":"def getCurrent_Time(ip,email):\n  url=\"http://0.0.0.0:8000/\"+email+\"/mec_app_support/v1/timing/current_time\"\n  url=url.replace(\"0.0.0.0:8000\",ip)\n  req=requests.get(url)\n  print(req)\n  print(req.content)"
                     }
                 }
             }

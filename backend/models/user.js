@@ -36,8 +36,13 @@ const pedidoss = new mongoose.Schema({
         type:String,
         required:true,
         index:{unique:false}
+    },
+    example:
+    {
+        type:String,
+        required:true
     }
-  
+ 
 });
 const userSchema= new mongoose.Schema({
     name:{
@@ -55,6 +60,10 @@ const userSchema= new mongoose.Schema({
         type:String,
         required:true
     },
+    etsi:{
+        type:String,
+        index:{unique:true}
+    }
    
 });
 userSchema.pre("save",async function(next){

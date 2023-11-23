@@ -1,0 +1,199 @@
+{
+    "bwm":
+    {
+        "GET":
+        {
+        "bw_allocations":
+        {
+            "200":
+            {
+                "txt":"Upon success, a response body containing an array of the bandwidthAllocations is returned."
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Authorization Required"
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "example":
+            {
+                "txt":"def getbw_allocations(ip, etsiID):\n  url = \"http://try-mec.etsi.org/\" + etsiID + \"/mep1/bwm/v1/bw_allocations\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  req = requests.get(url)\n  print(req.content)"
+
+            }
+ 
+        },
+        "bw_allocationsID":
+        {
+            "200":
+            {
+                "txt":"Upon success, a response body containing an array of the bandwidthAllocations is returned."
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Authorization Required"
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "example":
+            {
+                "txt":"def getbw_allocationsID(ip, appinstance, etsiID, exampleID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/bwm/v1/bw_allocations/exampleID\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  req = requests.get(url)\n  print(req)\n  print(req.content)"
+
+            }
+ 
+        }
+    },
+    "POST":
+    {
+        "bw_allocations":
+        {
+            "201":
+            {
+                "txt":"Upon success, the HTTP response shall include a 'Location' HTTP header that contains the resource URI of the created resource."
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Authorization Required"
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "example":
+            {
+                "txt":"def postbw_allocations(ip, appinstance, trafficinstance, email, etsiID):\n  f = {\n    \"timeStamp\": {\n      \"seconds\": 1,\n      \"nanoSeconds\": 6\n    },\n    \"allocationDirection\": \"allocationDirection\",\n    \"fixedBWPriority\": \"SEE_DESCRIPTION\",\n    \"requestType\": 0,\n    \"sessionFilter\": [\n      {\n        \"protocol\": \"protocol\",\n        \"sourcePort\": \"sourcePort\",\n        \"dstPort\": \"dstPort\",\n        \"sourceIp\": \"sourceIp\",\n        \"dstAddress\": \"dstAddress\"\n      },\n      {\n        \"protocol\": \"protocol\",\n        \"sourcePort\": \"sourcePort\",\n        \"dstPort\": \"dstPort\",\n        \"sourceIp\": \"sourceIp\",\n        \"dstAddress\": \"dstAddress\"\n      }\n    ],\n    \"appName\": \"appName\",\n    \"allocationId\": \"allocationId\",\n    \"appInsId\": \"appInsId\",\n    \"fixedAllocation\": \"fixedAllocation\"\n  }\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/bwm/v1/bw_allocations\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  x = requests.post(url, json=f)\n  print(x.content)"
+
+            }
+        }
+    },
+    "PUT":
+    {
+        "bw_allocations":
+        {
+            "200":
+            {
+                "txt":"Used to indicate nonspecific success. The response body contains a representation of the resource."
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Authorization Required"
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "412":
+            {
+                "txt": "Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "example":
+            {
+                "txt": "def putbw_allocationsID(ip, etsiID, exampleID):\n  f = {\n    \"timeStamp\": {\n      \"seconds\": 1,\n      \"nanoSeconds\": 6\n    },\n    \"allocationDirection\": \"allocationDirection\",\n    \"fixedBWPriority\": \"SEE_DESCRIPTION\",\n    \"requestType\": 0,\n    \"sessionFilter\": [\n      {\n        \"protocol\": \"protocol\",\n        \"sourcePort\": \"sourcePort\",\n        \"dstPort\": \"dstPort\",\n        \"sourceIp\": \"sourceIp\",\n        \"dstAddress\": \"dstAddress\"\n      },\n      {\n        \"protocol\": \"protocol\",\n        \"sourcePort\": \"sourcePort\",\n        \"dstPort\": \"dstPort\",\n        \"sourceIp\": \"sourceIp\",\n        \"dstAddress\": \"dstAddress\"\n      }\n    ],\n    \"appName\": \"appName\",\n    \"allocationId\": \"allocationId\",\n    \"appInsId\": \"appInsId\",\n    \"fixedAllocation\": \"fixedAllocation\"\n  }\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/bwm/v1/bw_allocations/exampleID\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  x = requests.post(url, json=f)\n  print(x.content)"
+
+            },
+            "405":
+            {
+                "txt": "Does not Exist."
+            }
+
+        }
+    },
+    "DELETE":
+    {   
+        "bw_allocations":
+        {
+            "204":
+            {
+                "txt":"Upon success, a response 204 No Content without any response body is returned."
+            },
+            "403":
+            {
+                "txt": "Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt": "Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "example":
+            {
+                "txt":"def deletebw_allocationsID(ip, etsiID, exampleID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/bwm/v1/bw_allocations/exampleID\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  req = requests.delete(url)\n  print(req)\n  print(req.content)"
+            }
+
+            }
+        },
+
+
+    "PATCH":
+    {
+        "bw_allocations":
+        {
+            "200":
+            {
+                "txt":"Used to indicate nonspecific success. The response body contains a representation of the resource."
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Authorization Required"
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "412":
+            {
+                "txt": "Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            }
+          
+
+
+        }
+    }
+
+
+    }
+}
+
+

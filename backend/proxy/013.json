@@ -1,0 +1,1306 @@
+{
+    "GET":
+    {   
+        "queries/distance":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getDistance(ip, etsiID):\n  f = {\n    \"requester\": \"mep1\",\n    \"address\": \"10.10.0.1\",\n    \"latitude\": \"43.737087\",\n    \"longitude\": \"7.421007\"\n  }\n  url = \"http://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/distance?requester=mep1&address=10.10.0.1\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "queries/users":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getUsers(ip, etsiID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/users\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+
+            }
+
+        },
+        "queries/zones":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getZones(ip, etsiID):\n  url = \"http://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/zones\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+
+            }
+
+        },
+        "queries/zonesID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getZonesID(ip, etsiID, exampleID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/zones/exampleid\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "queries/zones/zonesID/accessPoints":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getZonesIDAccesPoints(ip, etsiID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/zones/exampleID/accessPoints\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "queries/zones/zonesID/accessPoints/accessPointsID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getZonesIDAccessPointsID(ip, etsiID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/queries/zones/exampleZone/accessPoints/accespointID\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/area/circle":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getcircle(ip, etsiID):\n  url = \"http://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/subscriptions/area/circle\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/area/circle/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getcircleID(ip, etsiID, exampleID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/subscriptions/area/circle/exampleID\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+
+        },
+        "subscriptions/distance":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionDistance(ip, etsiID):\n  url = \"https://try-mec.etsi.org/\" + etsiID + \"/mep1/location/v2/subscriptions/distance\"\n  url = url.replace(\"try-mec.etsi.org\", ip)\n  try:\n    x = requests.get(url)\n    result = x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+
+        },
+        "subcriptions/distance/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionDistanceID(ip,etsiID,exampleID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/distance/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+
+        },
+        "subscriptions/periodic":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionsPeriodic(ip,etsiID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/periodic\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+
+        },
+        "subscriptions/periodic/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionperiodicID(ip,etsiID,exampleID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/periodic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/userTracking":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionUserTracking(ip,etsiID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/userTracking\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/userTracking/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getsubscriptionUserTrackingID(ip,etsiID,exampleID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/userTracking/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+
+        },
+        "subscriptions/zonalTraffic":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getzonalTraffic(ip,etsiID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zonalTraffic\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/zonalTraffic/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt": "def getzonalTrafficID(ip,etsiID,exampleID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zonalTraffic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/zoneStatus":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt": "def getzoneStatus(ip,etsiID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zoneStatus\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        },
+        "subscriptions/zoneStatus/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful response to users request"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def getzoneStatusID(ip,etsiID,exampleID):\n  url=\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zoneStatus/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.get(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+
+        }
+
+
+    },
+    "POST":
+    {
+        "subscriptions/area/circle":
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def postsubscriptionsareacircle(ip,jsonm,etsiID,exampleID):\n  f={\n  \"circleNotificationSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"callbackData\": \"1234\",\n      \"notifyURL\": \"http://my.callback.com/location-area-circle/some-id\"\n    },\n    \"address\": [\n      \"10.100.0.4\"\n    ],\n    \"checkImmediate\": true,\n    \"enteringLeavingCriteria\": \"Entering\",\n    \"frequency\": 1,\n    \"latitude\": 43.748993,\n    \"longitude\": 7.437573,\n    \"radius\": 200,\n    \"trackingAccuracy\": 10\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/area/circle\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/distance":
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def postsubscriptiondistance(ip,jsonm,etsiID,exampleID):\n  f={\n  \"distanceNotificationSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"callbackData\": \"1234\",\n      \"notifyURL\": \"http://my.callback.com/location-distance/some-id\"\n    },\n    \"monitoredAddress\": [\n      \"10.10.0.1\",\n      \"10.1.0.1\"\n    ],\n    \"checkImmediate\": true,\n    \"criteria\": \"AllWithinDistance\",\n    \"distance\": 100,\n    \"frequency\": 10,\n    \"referenceAddress\": [\n      \"10.100.0.1\"\n    ],\n    \"trackingAccuracy\": 10\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/distance\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/periodic":
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def postsubscriptionperiodic(ip,jsonm,etsiID,exampleID):\n  f={\n  \"periodicNotificationSubscription\": {\n    \"address\": [\n      \"string\"\n    ],\n    \"callbackReference\": {\n      \"callbackData\": \"string\",\n      \"notificationFormat\": \"XML\",\n      \"notifyURL\": \"string\"\n    },\n    \"clientCorrelator\": \"string\",\n    \"duration\": 0,\n    \"frequency\": 0,\n    \"link\": [\n      {\n        \"href\": \"string\",\n        \"rel\": \"string\"\n      }\n    ],\n    \"requestedAccuracy\": 0,\n    \"requester\": \"string\",\n    \"resourceURL\": \"string\"\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/periodic\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/userTracking":
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def postsubscriptionuserTracking(ip,jsonm,etsiID,exampleID):\n  f={\n  \"userTrackingSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-user-tracking/some-id\"\n    },\n    \"address\": \"10.100.0.1\",\n    \"userEventCriteria\": [\n      \"Entering\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/userTracking\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/zonalTraffic":
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt": "def postsubscriptionzonalTraffic(ip,jsonm,etsiID,exampleID):\n  f={\n  \"zonalTrafficSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-zonal-traffic/some-id\"\n    },\n    \"zoneId\": \"zone01\",\n    \"userEventCriteria\": [\n      \"Entering\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zonalTraffic\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/zoneStatus": 
+        {
+            "201":
+            {
+                "txt":"Successful subscription"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def postsubscriptionszoneStatus(ip,jsonm,etsiID,exampleID):\n  f={\n  \"zoneStatusSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-zonal-status/some-id\"\n    },\n    \"zoneId\": \"zone01\",\n    \"numberOfUsersZoneThreshold\": 3,\n    \"operationStatus\": [\n      \"Serviceable\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zoneStatus\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.post(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        }
+    },
+    "PUT":
+    {  
+        "subscriptions/area/circle/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptioncircleID(ip,json,etsiID,exampleID):\n  f={\n  \"circleNotificationSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"callbackData\": \"1234\",\n      \"notifyURL\": \"http://my.callback.com/location-area-circle/some-id\"\n    },\n    \"address\": [\n      \"10.100.0.4\"\n    ],\n    \"checkImmediate\": true,\n    \"enteringLeavingCriteria\": \"Entering\",\n    \"frequency\": 1,\n    \"latitude\": 43.748993,\n    \"longitude\": 7.437573,\n    \"radius\": 200,\n    \"resourceURL\": \"http://[hostIP]/sbox-xyz123/location/v2/subscriptions/area/circle/subscription123\",\n    \"trackingAccuracy\": 10\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/area/circle/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/distance/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptiondistanceID(ip,json,etsiID,exampleID):\n  f={\n  \"distanceNotificationSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"callbackReference\": {\n      \"callbackData\": \"1234\",\n      \"notifyURL\": \"http://my.callback.com/location-distance/some-id\"\n    },\n    \"monitoredAddress\": [\n      \"10.10.0.1\",\n      \"10.1.0.1\"\n    ],\n    \"checkImmediate\": true,\n    \"criteria\": \"AllWithinDistance\",\n    \"distance\": 100,\n    \"frequency\": 10,\n    \"referenceAddress\": [\n      \"10.100.0.1\"\n    ],\n    \"resourceURL\": \"http://[hostIP]/sbox-xyz123/location/v2/subscriptions/distance/subscription123\",\n    \"trackingAccuracy\": 10\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/distance/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/periodic/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptionPeriodicID(ip,json,etsiID,exampleID):\n  f={\n  \"periodicNotificationSubscription\": {\n    \"address\": [\n      \"string\"\n    ],\n    \"callbackReference\": {\n      \"callbackData\": \"string\",\n      \"notificationFormat\": \"XML\",\n      \"notifyURL\": \"string\"\n    },\n    \"clientCorrelator\": \"string\",\n    \"duration\": 0,\n    \"frequency\": 0,\n    \"link\": [\n      {\n        \"href\": \"string\",\n        \"rel\": \"string\"\n      }\n    ],\n    \"requestedAccuracy\": 0,\n    \"requester\": \"string\",\n    \"resourceURL\": \"string\"\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/periodic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/userTracking/subscriptionID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptionUserTrackingID(ip,json,etsiID,exampleID):\n  f={\n  \"userTrackingSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"resourceURL\": \"http://[hostIP]/sbox-xyz123/location/v2/subscriptions/userTracking/subscription123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-user-tracking/some-id\"\n    },\n    \"address\": \"10.100.0.1\",\n    \"userEventCriteria\": [\n      \"Entering\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/userTracking/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+
+            }
+        },
+        "subscriptions/zonalTraffic/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptionzonalTrafficID(ip,json,etsiID,exampleID):\n  f={\n  \"zonalTrafficSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"resourceURL\": \"http://[hostIP]/sbox-xyz123/location/v2/subscriptions/zonalTraffic/subscription123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-zonal-traffic/some-id\"\n    },\n    \"zoneId\": \"zone01\",\n    \"userEventCriteria\": [\n      \"Entering\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zonalTraffic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/zoneStatus/subcriptionsID":
+        {
+            "200":
+            {
+                "txt":"Successful subscription to response to subscription notifications"
+            },
+            "400":
+            {
+                "txt":"Bad Request : used to indicate that incorrect parameters were passed to the request."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "406":
+            {
+                "txt":"Not Acceptable : used to indicate that the server cannot provide the any of the content formats supported by the client."
+            },
+            "412":
+            {
+                "txt":"Precondition failed : used when a condition has failed during conditional requests, e.g. when using ETags to avoid write conflicts when using PUT"
+            },
+            "422":
+            {
+                "txt":"Unprocessable Entity : used to indicate that the server understands the content type of the request entity and that the syntax of the request entity is correct but that the server is unable to process the contained instructions. This error condition can occur if an JSON request body is syntactically correct but semantically incorrect, for example if the target area for the request is considered too large. This error condition can also occur if the capabilities required by the request are not supported."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def putsubscriptionzoneStatusID(ip,jsonm,etsiID,exampleID):\n  f={\n  \"zoneStatusSubscription\": {\n    \"clientCorrelator\": \"0123\",\n    \"resourceURL\": \"http://[hostIP]/sbox-xyz123/location/v2/subscriptions/zoneStatus/subscription123\",\n    \"callbackReference\": {\n      \"notifyURL\": \"http://my.callback.com/location-zonal-status/some-id\"\n    },\n    \"zoneId\": \"zone01\",\n    \"numberOfUsersZoneThreshold\": 3,\n    \"operationStatus\": [\n      \"Serviceable\"\n    ]\n  }\n}\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zoneStatus/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.put(url,json=f)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        }
+
+    },
+    "delete":
+    {
+        "subcriptions/area/circle/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def deletesubscriptioncircleID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/area/circle/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/distance/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt": "def deletesubscriptionDistanceID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/distance/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subscriptions/periodic/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt": "def deletesubscriptionPeriodicID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/periodic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subcriptions/userTracking/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def deletesubscriptionUserTrackingID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/userTracking/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subcriptions/zonalTraffic/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def deletesubscriptionzonalTrafficID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zonalTraffic/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        },
+        "subcriptions/zoneStatus/subcriptionsID":
+        {
+            "204":
+            {
+                "txt":"No Content."
+            },
+            "401":
+            {
+                "txt":"Unauthorized : used when the client did not submit credentials."
+            },
+            "403":
+            {
+                "txt":"Forbidden : operation is not allowed given the current status of the resource."
+            },
+            "404":
+            {
+                "txt":"Not Found : used when a client provided a URI that cannot be mapped to a valid resource URI."
+            },
+            "429":
+            {
+                "txt":"Too Many Requests : used when a rate limiter has triggered."
+            },
+            "example":
+            {
+                "txt":"def deletesubscriptionzoneStatusID(ip,etsiID,exampleID):\n  url =\"https://try-mec.etsi.org/\"+etsiID+\"/mep1/location/v2/subscriptions/zoneStatus/exampleID\"\n  url=url.replace(\"try-mec.etsi.org\",ip)\n  try:\n    x=requests.delete(url)\n    result=x.decode(\"utf-8\")\n    print(result)\n  except Exception as e:\n    print(e)"
+            }
+        }
+    }
+
+
+
+}
