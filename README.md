@@ -1,6 +1,6 @@
 # MEC FACTORY WEBSITE 
 
-Test and try ur Mec apps using this proxy  that through the website gives infos and resolutions form every http requests made to the ETSI MEC platform
+Test and try ur Mec apps using this proxy  that through the website gives infos and resolutions for every http requests made to the ETSI MEC platform
 
 BACKEND 
 
