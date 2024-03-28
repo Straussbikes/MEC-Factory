@@ -2,7 +2,7 @@
 
 Test and try ur Mec apps using this proxy  that through the website gives infos and resolutions for every http requests made to the ETSI MEC platform
 
-BACKEND 
+BACKEND - Node.js and Express
 
 
     BUILD 
@@ -10,7 +10,7 @@ BACKEND
         npm i && npm run start
 
 
-FRONTEND 
+FRONTEND - Vue3 and pinia
 
     BUILD
 
